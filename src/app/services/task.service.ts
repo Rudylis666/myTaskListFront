@@ -12,6 +12,6 @@ export class TaskService {
 
   constructor(private http: HttpClient) { }
   getTasks(): Observable<Array<Task>>{
-    return this.http.get<Array<Task>>('${this.apiUrl}getAll/');
+    return this.http.get<Array<Task>>('http://localhost:8080/task/getAll/');
   }
 }
