@@ -19,6 +19,7 @@ export class MainPageComponent {
     this.taskService.getTasks().subscribe((data)=>{
       console.log(data);
       this.tasks=data;
+      console.log(this.tasks);
     })
   }
 }
