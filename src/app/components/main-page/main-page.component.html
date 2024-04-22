@@ -17,6 +17,16 @@
 </form>
 
 <div class="todo-container">
-  <ul class="todo-list"></ul>
+  <ul class="todo-list">
+    <li class="todo" *ngFor="let task of tasks;">
+      <div class="todo-item">
+          <p>{{task.title}}</p>
+        </div>
+        <div class="todo-icons">
+          <i class="fas fa-check-circle complete-btn"></i>
+          <i class="fas fa-trash trash-btn"></i>
+        </div>
+      </li>
+  </ul>
 </div>
 </body>
