@@ -23,8 +23,13 @@ export class MainPageComponent {
     this.taskService.getTasks().subscribe((data)=>{
       console.log(data);
       this.tasks=data;
+      this.tasks.forEach(task => {
+        this.stepsService.getSteps(task.taskId).subscribe((steps) => {
+          task.steps = steps;
+          console.log(task.steps);
+        });
+      })
       console.log(this.tasks);
-      console.log(this.tasks[0].status)
     })
   }
   getStatusDescription(taskStatus: Status | Status[]) {
