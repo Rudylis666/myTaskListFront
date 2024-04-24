@@ -10,7 +10,8 @@ import {Steps} from "../modules/steps";
 export class StepsService {
   private apiUrl = 'http://localhost:8080/step/';
   constructor(private http: HttpClient) { }
-  getSteps(taskId: BigInt): Observable<Array<Steps>>{
+
+  getSteps(taskId: BigInt | undefined): Observable<Array<Steps>>{
     return this.http.get<Array<Steps>>('http://localhost:8080/step/getAll/'+taskId);
   }
 }

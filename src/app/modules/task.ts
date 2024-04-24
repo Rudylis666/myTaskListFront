@@ -1,4 +1,5 @@
 import {Status} from "./status";
+import {Steps} from "./steps";
 
 export interface Task{
   taskId?: BigInt;
@@ -7,5 +8,6 @@ export interface Task{
   setDate: Date,
   title: String,
   status: Array<Status>;
+  steps?: Steps[];
 
 }
