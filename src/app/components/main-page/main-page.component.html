@@ -30,13 +30,14 @@
           <i class="fas fa-trash trash-btn"></i>
         </div>
       <!-- TUTAJ WYPISUJE KROKI -->
-      <div class="todo-steps">
-        <div class="step">
-          <div class="step-icons">
-            BLEBLE BLE
+      <div class="steps">
+        <div class="step-item" *ngFor="let step of task.steps">
+            {{step.description}}
+            {{step.deadline}}
+            <div class="todo-icons">
             <i class="fas fa-check-circle complete-btn"></i>
             <i class="fas fa-trash trash-btn"></i>
-          </div>
+            </div>
         </div>
       </div>
     </li>
